@@ -3,7 +3,7 @@
 A FastAPI-based server that connects **Pinecone** for semantic search and **Gemini** for natural language similarity scoring.  
 It enables searching complaints in Arabic and retrieving relevant solutions.
 
-## 🚀 Features
+##  Features
 - Store (upsert) complaints and solutions into Pinecone.
 - Search complaints in natural Arabic text.
 - Validate similarity using **Google Gemini**.
@@ -20,9 +20,9 @@ It enables searching complaints in Arabic and retrieving relevant solutions.
 - Activate the virtual environment
     - .\myenv\Scripts\activate (for windows users)
     - source myenv/bin/activate (for linux users)
-- pip install -r requirements.txt
-- Install the necessary libraries
-    - pip install  python-dotenv fastapi pytest uvicorn pinecone generativeai
+- Install the required libraries
+    - pip install  python-dotenv fastapi  uvicorn pinecone generativeai
+- Make sure to visit the Pinecone and Google Studio and create/update the .env 
 
 ## Run the server
 - uvicorn app:app --reload
