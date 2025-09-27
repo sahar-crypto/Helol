@@ -1,0 +1,43 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: "helol-backend"
+    restart: on-failure
+    env_file:
+      - .env
+    command:
+      bash -c "
+      python3 manage.py makemigrations &&
+      python3 manage.py migrate &&
+      sh loaddata.sh &&
+      python3 manage.py runserver 0.0.0.0:8080
+      "
+    ports:
+      - "8000:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    hostname: "heloldb"
+    restart: on-failure
+    env_file:
+      - .env
+    ports:
+      - "3307:${DB_PORT}"
+    expose:
+      - "${DB_PORT}"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

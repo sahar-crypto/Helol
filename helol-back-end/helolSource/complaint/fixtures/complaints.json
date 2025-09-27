@@ -1,0 +1,68 @@
+[
+  {
+    "model": "complaint.complaint",
+    "pk": 1,
+    "fields": {
+      "session": 1,
+      "service": 2,
+      "neighborhood": 1,
+      "user": 1,
+      "content": "العداد بيفصل كل شوية لوحده. بدأ يحصل من الأسبوع اللي فات. فيه مشكلة في قراءة العداد."
+    }
+  },
+  {
+    "model": "complaint.complaint",
+    "pk": 2,
+    "fields": {
+      "session": 2,
+      "service": 3,
+      "neighborhood": 1,
+      "user": 1,
+      "content": "في انقطاع متكرر في الكهرباء في منطقة الزهور، الشارع الرئيسي. الانقطاع بيحصل كل يوم تقريباً مرتين أو تلاتة في اليوم."
+    }
+  },
+  {
+    "model": "complaint.complaint",
+    "pk": 3,
+    "fields": {
+      "session": 4,
+      "service": 1,
+      "neighborhood": 3,
+      "user": 2,
+      "content": "فاتورة الكهرباء عالية جداً الشهر ده بدون سبب واضح. مش فاهمة السبب في الارتفاع."
+    }
+  },
+  {
+    "model": "complaint.complaint",
+    "pk": 4,
+    "fields": {
+      "session": 5,
+      "service": 1,
+      "neighborhood": 3,
+      "user": 2,
+      "content": "مشكلة في تسجيل الدخول للتطبيق، بيقول كلمة المرور غلط ولم يستلم إيميل استعادة كلمة المرور."
+    }
+  },
+  {
+    "model": "complaint.complaint",
+    "pk": 5,
+    "fields": {
+      "session": 7,
+      "service": 1,
+      "neighborhood": 5,
+      "user": 3,
+      "content": "مش قادر أسجل دخول على النظام من الكمبيوتر أو الموبايل. مش فاكر الإيميل المسجل."
+    }
+  },
+  {
+    "model": "complaint.complaint",
+    "pk": 6,
+    "fields": {
+      "session": 9,
+      "service": 1,
+      "neighborhood": 5,
+      "user": 3,
+      "content": "استفسار عن الفواتير المؤجلة وإمكانية التقسيط ووجود غرامات على التأخير."
+    }
+  }
+]

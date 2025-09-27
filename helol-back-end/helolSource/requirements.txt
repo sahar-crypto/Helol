@@ -1,0 +1,18 @@
+# Django
+django
+djangorestframework
+djangorestframework-simplejwt
+django-safedelete
+
+# Postgres
+psycopg2-binary
+
+# Timezone
+tzdata>=2022.1
+
+# Voice Handling
+mutagen
+
+# Websockets
+websockets
+channels

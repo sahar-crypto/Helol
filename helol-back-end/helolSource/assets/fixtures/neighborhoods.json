@@ -1,0 +1,121 @@
+[
+  {
+    "model": "assets.neighborhood",
+    "pk": 1,
+    "fields":
+      {
+        "name": "Downtown",
+        "governorate": "Cairo",
+        "city": "Cairo",
+        "postal_code": "11511",
+        "address": "Tahrir Square"
+      }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 2,
+    "fields":
+      {
+        "name": "Heliopolis",
+        "governorate": "Cairo",
+        "city": "Cairo",
+        "postal_code": "11757",
+        "address": "Korba"
+      }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 3,
+    "fields":
+    {
+      "name": "Maadi",
+      "governorate": "Cairo",
+      "city": "Cairo",
+      "postal_code": "11431",
+      "address": "Road 9"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 4,
+    "fields":
+    {
+      "name": "Zamalek",
+      "governorate": "Cairo",
+      "city": "Cairo",
+      "postal_code": "11211",
+      "address": "26th July St"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 5,
+    "fields":
+    {
+      "name": "Dokki",
+      "governorate": "Giza",
+      "city": "Giza",
+      "postal_code": "12611",
+      "address": "Tahrir St"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 6,
+    "fields":
+    {
+      "name": "Mohandessin",
+      "governorate": "Giza",
+      "city": "Giza",
+      "postal_code": "12311",
+      "address": "Lebanon Square"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 7,
+    "fields":
+    {
+      "name": "Nasr City",
+      "governorate": "Cairo",
+      "city": "Cairo",
+      "postal_code": "11765",
+      "address": "Makram Ebeid"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 8,
+    "fields":
+    {
+      "name": "6th of October",
+      "governorate": "Giza",
+      "city": "6th of October",
+      "postal_code": "12573",
+      "address": "El Mehwar Rd"
+    }
+  },
+  {
+    "model": "assets.neighborhood",
+    "pk": 9,
+    "fields":
+    {
+      "name": "Sheikh Zayed",
+      "governorate": "Giza",
+      "city": "Sheikh Zayed",
+      "postal_code": "12588",
+      "address": "Arkan Mall"
+    }
+  },
+  {"model": "assets.neighborhood",
+    "pk": 10,
+    "fields":
+    {
+      "name": "Shubra",
+      "governorate": "Cairo",
+      "city": "Cairo",
+      "postal_code": "11611",
+      "address": "Shubra St"
+    }
+  }
+]

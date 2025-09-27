@@ -1,0 +1,5 @@
+[
+  {"model": "assets.governmentalauthority", "pk": 1, "fields": {"name": "Ministry of Electricity", "email": "electricity@gov.eg", "phone": "0220000001", "address": "Nasr City"}},
+  {"model": "assets.governmentalauthority", "pk": 2, "fields": {"name": "Ministry of Gas", "email": "gas@gov.eg", "phone": "0220000002", "address": "Heliopolis"}},
+  {"model": "assets.governmentalauthority", "pk": 3, "fields": {"name": "Ministry of Water", "email": "water@gov.eg", "phone": "0220000003", "address": "Dokki"}}
+]

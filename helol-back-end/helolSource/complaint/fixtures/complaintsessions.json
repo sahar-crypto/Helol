@@ -1,0 +1,72 @@
+[
+  {
+    "model": "complaint.complaintsession",
+    "pk": 1,
+    "fields": {
+      "title": "مشكلة في عداد الكهرباء - فصل متكرر"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 2,
+    "fields": {
+      "title": "انقطاع متكرر في الكهرباء - منطقة الزهور"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 3,
+    "fields": {
+      "title": "استفسار عن الفاتورة والضرائب الجديدة"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 4,
+    "fields": {
+      "title": "فاتورة الكهرباء عالية - استفسار"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 5,
+    "fields": {
+      "title": "مشكلة في تسجيل الدخول للتطبيق"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 6,
+    "fields": {
+      "title": "متابعة مشكلة تسجيل الدخول"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 7,
+    "fields": {
+      "title": "مشكلة في تسجيل الدخول للنظام"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 8,
+    "fields": {
+      "title": "تعديل بيانات التواصل في الحساب"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 9,
+    "fields": {
+      "title": "استفسار عن الفواتير المؤجلة والتقسيط"
+    }
+  },
+  {
+    "model": "complaint.complaintsession",
+    "pk": 10,
+    "fields": {
+      "title": "استفسار عن قراءات العداد والطاقة الشمسية"
+    }
+  }
+]

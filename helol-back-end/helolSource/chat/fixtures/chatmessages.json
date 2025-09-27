@@ -1,0 +1,814 @@
+[
+  {
+    "model": "chat.chatmessage",
+    "pk": 1,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "السلام عليكم، عندي مشكلة في عداد الكهرباء.",
+      "response": "وعليكم السلام، ممكن توضحي لي نوع المشكلة؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:00:00Z",
+      "response_time": "2025-09-25T10:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 2,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "العداد بيفصل كل شوية لوحده.",
+      "response": "تمام، هل حصل ده من فترة طويلة ولا لسه جديد؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:02:00Z",
+      "response_time": "2025-09-25T10:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 3,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "بدأ يحصل من الأسبوع اللي فات.",
+      "response": "شكراً على التوضيح، هنبعت فني يراجع العداد.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:04:00Z",
+      "response_time": "2025-09-25T10:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 4,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "فيه مشكلة في قراءة العداد.",
+      "response": "تمام، هنبعت حد يراجع القراءات. ممكن أعرف آخر فاتورة اتسجلت عندكم؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:06:00Z",
+      "response_time": "2025-09-25T10:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 5,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "أيوة، آخر فاتورة كانت في بداية الشهر.",
+      "response": "الفاتورة الأخيرة كانت كام؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:08:00Z",
+      "response_time": "2025-09-25T10:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 6,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "الفاتورة الأخيرة كانت 350 جنيه.",
+      "response": "هل فيه اختلاف في القيمة دي عن الشهور اللي فاتت؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:10:00Z",
+      "response_time": "2025-09-25T10:11:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 7,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "ده أعلى من المعتاد، ليه كده؟",
+      "response": "ممكن يكون في زيادة في الاستهلاك هذا الشهر.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:12:00Z",
+      "response_time": "2025-09-25T10:13:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 8,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "ما أنا مش غيَّرت أي حاجة في البيت.",
+      "response": "ممكن نراجع قراءة العداد مع الفني.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:14:00Z",
+      "response_time": "2025-09-25T10:15:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 9,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "متى هييجي الفني؟",
+      "response": "الفني هييجي خلال 24 ساعة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:16:00Z",
+      "response_time": "2025-09-25T10:17:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 10,
+    "fields": {
+      "session": 1,
+      "user": 1,
+      "message": "تمام، شكراً ليكم.",
+      "response": "العفو، أي وقت تحبي تستفسري.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T10:18:00Z",
+      "response_time": "2025-09-25T10:19:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 11,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "أنا عايزة أعمل شكوى تانية.",
+      "response": "تفضلي، ايه المشكلة؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:00:00Z",
+      "response_time": "2025-09-26T09:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 12,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "في انقطاع متكرر في الكهرباء.",
+      "response": "في أي منطقة بالضبط؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:02:00Z",
+      "response_time": "2025-09-26T09:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 13,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "في منطقة الزهور، الشارع الرئيسي.",
+      "response": "تمام، هنبلغ الفرق الفنية.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:04:00Z",
+      "response_time": "2025-09-26T09:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 14,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "الانقطاع بيحصل كل يوم تقريباً.",
+      "response": "كم مرة بيحصل في اليوم؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:06:00Z",
+      "response_time": "2025-09-26T09:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 15,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "مرتين أو تلاتة في اليوم.",
+      "response": "هنعمل صيانة للخطوط في المنطقة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:08:00Z",
+      "response_time": "2025-09-26T09:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 16,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "متى تتوقع المشكلة تتحل؟",
+      "response": "خلال 48 ساعة إن شاء الله.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:10:00Z",
+      "response_time": "2025-09-26T09:11:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 17,
+    "fields": {
+      "session": 2,
+      "user": 1,
+      "message": "تمام، شكراً لسرعة الاستجابة.",
+      "response": "دائماً تحت خدمتك.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T09:12:00Z",
+      "response_time": "2025-09-26T09:13:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 18,
+    "fields": {
+      "session": 3,
+      "user": 1,
+      "message": "عندي استفسار عن الفاتورة الجديدة.",
+      "response": "تفضلي، ايه الاستفسار؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T14:00:00Z",
+      "response_time": "2025-09-27T14:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 19,
+    "fields": {
+      "session": 3,
+      "user": 1,
+      "message": "لاحظت زيادة في قيمة الضريبة.",
+      "response": "ده بسبب التعديلات الجديدة في التعريفة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T14:02:00Z",
+      "response_time": "2025-09-27T14:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 20,
+    "fields": {
+      "session": 3,
+      "user": 1,
+      "message": "هل فيه خصم للمواطنين كبار السن؟",
+      "response": "أيوة، فيه خصم 25% لمن فوق ال65 سنة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T14:04:00Z",
+      "response_time": "2025-09-27T14:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 21,
+    "fields": {
+      "session": 3,
+      "user": 1,
+      "message": "كيف أقدم طلب الخصم؟",
+      "response": "تقدري تقدميه من خلال الموقع أو الفرع.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T14:06:00Z",
+      "response_time": "2025-09-27T14:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 22,
+    "fields": {
+      "session": 3,
+      "user": 1,
+      "message": "شكراً على المعلومات.",
+      "response": "العفو، أي خدمة أخرى؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T14:08:00Z",
+      "response_time": "2025-09-27T14:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 23,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "مساء الخير، فاتورة الكهرباء عندي عالية جداً الشهر ده.",
+      "response": "مساء النور، هل كان في استهلاك أعلى من المعتاد؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:00:00Z",
+      "response_time": "2025-09-25T11:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 24,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "بصراحة مش فاهمة السبب.",
+      "response": "ممكن نراجع سجل العداد ونشوف إذا كان في خطأ.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:02:00Z",
+      "response_time": "2025-09-25T11:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 25,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "تمام شكراً.",
+      "response": "العفو، هنبلغك بالنتيجة قريب.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:04:00Z",
+      "response_time": "2025-09-25T11:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 26,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "ممكن أعرف إزاي أتابع حالة الشكوى؟",
+      "response": "تقدري تتابعي من خلال الرقم 15300.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:06:00Z",
+      "response_time": "2025-09-25T11:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 27,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "هل فيه تطبيق للموبايل؟",
+      "response": "أيوة، فيه تطبيق 'الطاقة' للخدمات.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:08:00Z",
+      "response_time": "2025-09-25T11:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 28,
+    "fields": {
+      "session": 4,
+      "user": 2,
+      "message": "هحمل التطبيق وأجرب.",
+      "response": "أكيد، هيوفر عليك وقت كتير.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T11:10:00Z",
+      "response_time": "2025-09-25T11:11:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 29,
+    "fields": {
+      "session": 5,
+      "user": 2,
+      "message": "عندي مشكلة في تسجيل الدخول للتطبيق.",
+      "response": "ما هي المشكلة بالضبط؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:00:00Z",
+      "response_time": "2025-09-26T15:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 30,
+    "fields": {
+      "session": 5,
+      "user": 2,
+      "message": "بيقول لي كلمة المرور غلط.",
+      "response": "جربتي نسيت كلمة المرور؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:02:00Z",
+      "response_time": "2025-09-26T15:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 31,
+    "fields": {
+      "session": 5,
+      "user": 2,
+      "message": "جربت ومجاشلي أي إيميل.",
+      "response": "ممكن الإيميل يكون في السبام.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:04:00Z",
+      "response_time": "2025-09-26T15:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 32,
+    "fields": {
+      "session": 5,
+      "user": 2,
+      "message": "هشوف السبام وأرجعلك.",
+      "response": "تمام، أنا موجودة لأي مساعدة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:06:00Z",
+      "response_time": "2025-09-26T15:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 33,
+    "fields": {
+      "session": 6,
+      "user": 2,
+      "message": "لقيت الإيميل في السبام، شكراً.",
+      "response": "العفو، كلميني لو عندك أي مشكلة تانية.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:30:00Z",
+      "response_time": "2025-09-26T15:31:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 34,
+    "fields": {
+      "session": 6,
+      "user": 2,
+      "message": "هل فيه خدمة العملاء 24 ساعة؟",
+      "response": "أيوة، الخط الساخن شغال 24/7.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:32:00Z",
+      "response_time": "2025-09-26T15:33:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 35,
+    "fields": {
+      "session": 6,
+      "user": 2,
+      "message": "كفو والله، شكراً ليكم.",
+      "response": "نورتينا، دايماً على استعداد لخدمتك.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T15:34:00Z",
+      "response_time": "2025-09-26T15:35:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 36,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "مش قادر أسجل دخول على النظام.",
+      "response": "هنراجع بياناتك ونعيد ضبط كلمة المرور.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:00:00Z",
+      "response_time": "2025-09-25T12:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 37,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "ممكن يكون العطل من عندي؟",
+      "response": "ممكن، جربي من متصفح مختلف أو من الموبايل.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:02:00Z",
+      "response_time": "2025-09-25T12:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 38,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "جربت من الموبايل ونفس المشكلة.",
+      "response": "طيب، هنساعدك في reset لكلمة المرور.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:04:00Z",
+      "response_time": "2025-09-25T12:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 39,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "إزاي أعمل reset؟",
+      "response": "هبعتلك لينك على الإيميل بتاعك.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:06:00Z",
+      "response_time": "2025-09-25T12:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 40,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "ما أنا مش فاكر الإيميل.",
+      "response": "ممكن تعطيني الرقم القومي عشان ألاقي البيانات.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:08:00Z",
+      "response_time": "2025-09-25T12:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 41,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "89012345678901",
+      "response": "تمام، لقيت الإيميل: lomai.mamdouh@helol.com",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:10:00Z",
+      "response_time": "2025-09-25T12:11:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 42,
+    "fields": {
+      "session": 7,
+      "user": 3,
+      "message": "أيوة ده صح، شكراً.",
+      "response": "هبعتلك اللينك دلوقتي.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:12:00Z",
+      "response_time": "2025-09-25T12:13:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 43,
+    "fields": {
+      "session": 8,
+      "user": 3,
+      "message": "استلمت اللينك وعملت reset.",
+      "response": "ممتاز، هل قدرت تدخلي؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:30:00Z",
+      "response_time": "2025-09-25T12:31:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 44,
+    "fields": {
+      "session": 8,
+      "user": 3,
+      "message": "أيوة، دخلت والحمد لله.",
+      "response": "أهلاً وسهلاً، أي خدمة تانية؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:32:00Z",
+      "response_time": "2025-09-25T12:33:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 45,
+    "fields": {
+      "session": 8,
+      "user": 3,
+      "message": "عايزة أغير بيانات التواصل.",
+      "response": "تقدري تعدليها من إعدادات الحساب.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:34:00Z",
+      "response_time": "2025-09-25T12:35:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 46,
+    "fields": {
+      "session": 8,
+      "user": 3,
+      "message": "مش لاقية الخيار.",
+      "response": "هبعتلك screenshot يوضح الخطوات.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:36:00Z",
+      "response_time": "2025-09-25T12:37:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 47,
+    "fields": {
+      "session": 8,
+      "user": 3,
+      "message": "تمام، لقيتها، شكراً.",
+      "response": "العفو، دايماً موجودين لمساعدتك.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-25T12:38:00Z",
+      "response_time": "2025-09-25T12:39:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 48,
+    "fields": {
+      "session": 9,
+      "user": 3,
+      "message": "عندي سؤال عن الفواتير المؤجلة.",
+      "response": "تفضلي، ايه السؤال؟",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T16:00:00Z",
+      "response_time": "2025-09-26T16:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 49,
+    "fields": {
+      "session": 9,
+      "user": 3,
+      "message": "هل فيه غرامة على التأخير؟",
+      "response": "أيوة، فيه 5% غرامة بعد 30 يوم.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T16:02:00Z",
+      "response_time": "2025-09-26T16:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 50,
+    "fields": {
+      "session": 9,
+      "user": 3,
+      "message": "ممكن أقسط الفاتورة؟",
+      "response": "أيوة، تقدري تقدمي طلب تقسيط.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T16:04:00Z",
+      "response_time": "2025-09-26T16:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 51,
+    "fields": {
+      "session": 9,
+      "user": 3,
+      "message": "إزاي أقدم الطلب؟",
+      "response": "من خلال الفرع أو التطبيق.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T16:06:00Z",
+      "response_time": "2025-09-26T16:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 52,
+    "fields": {
+      "session": 9,
+      "user": 3,
+      "message": "شكراً على المعلومات.",
+      "response": "العفو، نورتينا.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-26T16:08:00Z",
+      "response_time": "2025-09-26T16:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 53,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "عايزة أعرف آخر عداد مسجل.",
+      "response": "آخر قراءة كانت 2450 ك.و.س.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:00:00Z",
+      "response_time": "2025-09-27T10:01:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 54,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "متى كانت القراءة؟",
+      "response": "من 15 يوم، في أول الشهر.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:02:00Z",
+      "response_time": "2025-09-27T10:03:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 55,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "تمام، شكراً لمساعدتك.",
+      "response": "أي وقت، دايماً تحت خدمتك.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:04:00Z",
+      "response_time": "2025-09-27T10:05:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 56,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "هل فيه خصم للطاقة الشمسية؟",
+      "response": "أيوة، فيه خصم 15% للمشتركين في الطاقة الشمسية.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:06:00Z",
+      "response_time": "2025-09-27T10:07:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 57,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "إزاي أقدم في النظام؟",
+      "response": "تقدري تقدمي الأوراق من الفرع.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:08:00Z",
+      "response_time": "2025-09-27T10:09:00Z"
+    }
+  },
+  {
+    "model": "chat.chatmessage",
+    "pk": 58,
+    "fields": {
+      "session": 10,
+      "user": 3,
+      "message": "شكراً جزيلاً.",
+      "response": "العفو، تفضلي بالاستفادة من الخدمة.",
+      "audio_file": null,
+      "audio_duration": null,
+      "message_time": "2025-09-27T10:10:00Z",
+      "response_time": "2025-09-27T10:11:00Z"
+    }
+  }
+]

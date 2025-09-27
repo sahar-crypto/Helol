@@ -1,0 +1,45 @@
+/* Reset & Base Layout */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Root wrapper — stretch full width */
+#root {
+  width: 100%;
+  text-align: right; /* or center if you prefer */
+  box-sizing: border-box;
+}
+
+/* Optional Card style (keep if used) */
+.card {
+  padding: 2em;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Optional Footer / Info text */
+.read-the-docs {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Typography (optional) */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}

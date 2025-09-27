@@ -1,0 +1,88 @@
+
+/* Container (static: scrolls when the page scrolls) */
+.navbar-container {
+  position: static;
+  top: 5px;
+  width: 100%;
+  background: #f6e984;
+  border-radius: 16px 16px 16px 16px;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-start; /* ✅ RTL, items flow from right */
+  align-items: center;
+  padding: 10px 30px;
+  height: 40px;
+  direction: rtl; /* ✅ RTL flow */
+}
+
+/* Right side (brand + logo + links) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Brand group (logo + brand name close together) */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* very small gap between logo and brand */
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Brand */
+.brand {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700; /* ✅ bold */
+  font-size: 32px;
+  color: #1d1248;
+  text-decoration: none;
+}
+
+/* Links */
+.nav-right a {
+  font-family: "Cairo", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  text-decoration: none;
+  color: #1d1248;
+}
+.nav-right a:hover{
+    color: darkblue;
+}
+.nav-right .brand-group .brand{
+    font-weight: 700;
+}
+/* Divider */
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .divider {
+    display: none;
+  }
+}

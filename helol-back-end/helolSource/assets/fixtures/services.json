@@ -1,0 +1,17 @@
+[
+  {"model": "assets.service", "pk": 1, "fields": {"governmental_authority": 1, "name": "Electricity Bill Payment", "online": true}},
+  {"model": "assets.service", "pk": 2, "fields": {"governmental_authority": 1, "name": "Electricity Meters", "online": false}},
+  {"model": "assets.service", "pk": 3, "fields": {"governmental_authority": 1, "name": "Power Outage Report", "online": false}},
+
+  {"model": "assets.service", "pk": 4, "fields": {"governmental_authority": 2, "name": "Gas Bill Payment", "online": true}},
+  {"model": "assets.service", "pk": 5, "fields": {"governmental_authority": 2, "name": "Gas Leak Emergency Report", "online": false}},
+  {"model": "assets.service", "pk": 6, "fields": {"governmental_authority": 2, "name": "New Gas Connection", "online": false}},
+  {"model": "assets.service", "pk": 7, "fields": {"governmental_authority": 2, "name": "Gas Quality Report", "online": false}},
+  {"model": "assets.service", "pk": 8, "fields": {"governmental_authority": 2, "name": "Gas Outage Report", "online": false}},
+
+  {"model": "assets.service", "pk": 9, "fields": {"governmental_authority": 3, "name": "Water Bill Payment", "online": true}},
+  {"model": "assets.service", "pk": 10, "fields": {"governmental_authority": 3, "name": "Water Supply Complaint", "online": false}},
+  {"model": "assets.service", "pk": 11, "fields": {"governmental_authority": 3, "name": "New Water Connection", "online": false}},
+  {"model": "assets.service", "pk": 12, "fields": {"governmental_authority": 3, "name": "Water Quality Report", "online": false}},
+  {"model": "assets.service", "pk": 13, "fields": {"governmental_authority": 3, "name": "Water Outage Report", "online": false}}
+]

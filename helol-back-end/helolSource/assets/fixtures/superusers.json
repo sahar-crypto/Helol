@@ -1,0 +1,5 @@
+[
+  {"model": "assets.user", "pk": 1, "fields": {"neighborhood": 1, "full_name": "Sahar Alaa", "national_id": "67890123456789", "email": "sahar.alaa@helol.com", "phone": "01267384569", "is_active": true, "is_staff": true, "is_superuser": true}},
+  {"model": "assets.user", "pk": 2, "fields": {"neighborhood": 3, "full_name": "Aya Eltayeb", "national_id": "78901234567890", "email": "aya.eltayeb@helol.com", "phone": "01082765433", "is_active": true, "is_staff": true, "is_superuser": true}},
+  {"model": "assets.user", "pk": 3, "fields": {"neighborhood": 5, "full_name": "Lomai Mamdouh", "national_id": "89012345678901", "email": "lomai.mamdouh@helol.com", "phone": "01592837546", "is_active": true, "is_staff": true, "is_superuser": true}}
+]

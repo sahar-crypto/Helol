@@ -1,0 +1,12 @@
+[
+  {"model": "assets.user", "pk": 4, "fields": {"neighborhood": 1, "full_name": "Ahmed Ali", "national_id": "12345678901234", "email": "ahmed@example.com", "phone": "01000000001", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 5, "fields": {"neighborhood": 2, "full_name": "Mona Hassan", "national_id": "12345678901235", "email": "mona@example.com", "phone": "01000000002", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 6, "fields": {"neighborhood": 3, "full_name": "Karim Mohamed", "national_id": "12345678901236", "email": "karim@example.com", "phone": "01000000003", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 7, "fields": {"neighborhood": 4, "full_name": "Sara Youssef", "national_id": "12345678901237", "email": "sara@example.com", "phone": "01000000004", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 8, "fields": {"neighborhood": 5, "full_name": "Omar Ibrahim", "national_id": "12345678901238", "email": "omar@example.com", "phone": "01000000005", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 9, "fields": {"neighborhood": 6, "full_name": "Layla Mahmoud", "national_id": "12345678901239", "email": "layla@example.com", "phone": "01000000006", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 10, "fields": {"neighborhood": 7, "full_name": "Mostafa Adel", "national_id": "12345678901240", "email": "mostafa@example.com", "phone": "01000000007", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 11, "fields": {"neighborhood": 8, "full_name": "Huda Nabil", "national_id": "12345678901241", "email": "huda@example.com", "phone": "01000000008", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 12, "fields": {"neighborhood": 9, "full_name": "Ali Fathy", "national_id": "12345678901242", "email": "ali@example.com", "phone": "01000000009", "is_active": true, "is_staff": false}},
+  {"model": "assets.user", "pk": 13, "fields": {"neighborhood": 10, "full_name": "Nora Magdy", "national_id": "12345678901243", "email": "nora@example.com", "phone": "01000000010", "is_active": true, "is_staff": false}}
+]

@@ -1,0 +1,35 @@
+# Ignore Django migration files but keep the folder
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+venv/
+.env
+
+# Django static/media
+staticfiles/
+media/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+docker-compose.yml  # optional, you can ignore it since it's not needed in the image
+
+# IDE/editor
+*.swp
+*.swo
+*.idea/
+.vscode/
+
+# Readme file
+README.md
