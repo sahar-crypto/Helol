@@ -16,14 +16,15 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center prompt if empty */
+  justify-content: flex-end; /* center prompt if empty */
   align-items: center;
 }
 
 .prompt {
   color: #555;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
+  font-family: "Cairo", sans-serif;
 }
 
 .message {
@@ -31,7 +32,7 @@
   border-radius: 15px;
   max-width: 70%;
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 25px;
   margin: 5px 0;
 }
 
@@ -52,7 +53,7 @@
 }
 
 .timestamp {
-  font-size: 12px;
+  font-size: 17px;
   color: #777;
   margin-top: 3px;
   text-align: right;
