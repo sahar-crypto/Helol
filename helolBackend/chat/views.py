@@ -14,7 +14,7 @@ class ChatViewSet:
 
         messages = ChatMessage.objects.filter(
             user_id=self.user_id
-        ).order_by('-message_time')
+        ).order_by('message_time')
 
         data = []
 
@@ -22,11 +22,16 @@ class ChatViewSet:
 
             message_id = message.id
             message_text = message.message
-            response_text = message.response
             message_date = message.message_time.strftime("%Y-%m-%d")
             message_time = message.message_time.strftime("%H:%M")
-            response_date = message.response_time.strftime("%Y-%m-%d")
-            response_time = message.response_time.strftime("%H:%M")
+            if message.response:
+                response_text = message.response
+                response_date = message.response_time.strftime("%Y-%m-%d")
+                response_time = message.response_time.strftime("%H:%M")
+            else:
+                response_text = None
+                response_date = None
+                response_time = None
 
             row = {
                 "id": message_id,

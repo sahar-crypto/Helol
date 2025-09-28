@@ -9,7 +9,7 @@ from utils.voice.file import voice_message_upload_path
 class ChatMessage(models.Model):
 
     # Relationships
-    session = models.ForeignKey(ComplaintSession, on_delete=models.PROTECT)
+    session = models.ForeignKey(ComplaintSession, on_delete=models.PROTECT, null=True)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     # Main Fields

@@ -3,6 +3,7 @@ django
 djangorestframework
 djangorestframework-simplejwt
 django-safedelete
+django-cors-headers
 
 # Postgres
 psycopg2-binary
@@ -16,3 +17,5 @@ mutagen
 # Websockets
 websockets
 channels
+channels_redis
+daphne

@@ -41,3 +41,10 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  redis:
+    image: redis:7-alpine
+    hostname: "helol-redis"
+    restart: on-failure
+    ports:
+      - "6379:6379"

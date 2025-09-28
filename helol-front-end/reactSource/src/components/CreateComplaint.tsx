@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../css/CreateComplaint.css";
-import Chat from "../components/Chat";
+import ChatBox from "../components/ChatBox";
 
 // Normalize Arabic-Indic and Eastern Arabic-Indic digits to ASCII digits
 function normalizeDigits(input = "") {
@@ -14,6 +14,7 @@ function CreateComplaint() {
   const [nationalId, setNationalId] = useState("");
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [userId, setUserId] = useState<number | null>(null);
 
   const chatRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,39 +28,74 @@ function CreateComplaint() {
     if (error) setError("");
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const cleaned = (nationalId || "").trim();
+  const cleaned = (nationalId || "").trim();
 
-    // exact 14 digits required
-    if (cleaned.length < 14) {
-      setError("الرقم القومي يجب أن يكون 14 رقمًا بالضبط");
-      setSubmitted(false);
-      return;
-    }
-    if (cleaned.length > 14) {
-      setError("الرقم القومي يجب ألا يزيد عن 14 رقمًا");
-      setSubmitted(false);
-      return;
-    }
-    if (!/^\d{14}$/.test(cleaned)) {
-      setError("الرقم القومي يجب أن يحتوي على أرقام فقط");
-      setSubmitted(false);
-      return;
+  // exact 14 digits required
+  if (cleaned.length < 14) {
+    setError("الرقم القومي يجب أن يكون 14 رقمًا بالضبط");
+    setSubmitted(false);
+    return;
+  }
+  if (cleaned.length > 14) {
+    setError("الرقم القومي يجب ألا يزيد عن 14 رقمًا");
+    setSubmitted(false);
+    return;
+  }
+  if (!/^\d{14}$/.test(cleaned)) {
+    setError("الرقم القومي يجب أن يحتوي على أرقام فقط");
+    setSubmitted(false);
+    return;
+  }
+
+  // ✅ passed validation
+  setError("");
+
+  try {
+    // 1. Call API
+    const res = await fetch(
+      `http://localhost:8000/assets/get-user-by-national-id/?full_name=${encodeURIComponent(
+        name
+      )}&national_id=${encodeURIComponent(cleaned)}`
+    );
+
+    if (!res.ok) {
+      throw new Error("فشل في الحصول على بيانات المستخدم");
     }
 
-    // ✅ passed validation
-    setError("");
+    // define a type for your API response
+    //type UserResponse = {
+    //  id: number;
+    //  full_name: string;
+    //  national_id: string;
+    //};
+
+    const json = await res.json();
+
+    if (!json.success || !json.data || !json.data.id) {
+      throw new Error("لم يتم العثور على المستخدم");
+    }
+
+    setUserId(json.data.id);
+
     setSubmitted(true);
 
-    // ✅ scroll to chat directly
+    // scroll after chat renders
     setTimeout(() => {
       if (chatRef.current) {
         chatRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }, 0);
-  };
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      setError(err.message);
+    } else {
+      setError("حدث خطأ أثناء الاتصال بالخادم");
+    }
+  }
+};
 
   return (
     <div className="create-complain-container">
@@ -98,9 +134,9 @@ function CreateComplaint() {
         </div>
       </div>
 
-      {submitted && (
+      {submitted && userId !== null && (
         <div ref={chatRef}>
-          <Chat />
+          <ChatBox userId={userId} />
         </div>
       )}
     </div>

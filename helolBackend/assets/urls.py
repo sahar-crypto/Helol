@@ -11,4 +11,5 @@ router.register('service', ServiceViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('get-user-by-national-id/', get_user_by_national_id)
 ]
