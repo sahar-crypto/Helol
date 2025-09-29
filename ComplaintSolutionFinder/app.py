@@ -24,32 +24,32 @@ FIELD_MAP = os.getenv("FIELD_MAP")
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")  
 GEMINI_MODEL = os.getenv("GEMINI_MODEL") 
 if not API_KEY:
-    raise ValueError("Missing PINECONE_API_KEY in .env file")
+    raise ValueError("Missing PINECONE_API_KEY in ..env.agent.backend file")
 if not INDEX_NAME:
-    raise ValueError("Missing INDEX_NAME in .env file")
+    raise ValueError("Missing INDEX_NAME in ..env.agent.backend file")
 if not NAMESPACE:
-    raise ValueError("Missing NAMESPACE in .env file")
+    raise ValueError("Missing NAMESPACE in ..env.agent.backend file")
 if not TOP_K:
-    raise ValueError("Missing TOP_K in .env file")
+    raise ValueError("Missing TOP_K in ..env.agent.backend file")
 if not PINECONE_CLOUD:
-    raise ValueError("Missing PINECONE_CLOUD in .env file")
+    raise ValueError("Missing PINECONE_CLOUD in ..env.agent.backend file")
 if not PINECONE_REGION:
-    raise ValueError("Missing PINECONE_REGION in .env file")
+    raise ValueError("Missing PINECONE_REGION in ..env.agent.backend file")
 if not EMBEDDING_MODEL:
-    raise ValueError("Missing EMBEDDING_MODEL in .env file")
+    raise ValueError("Missing EMBEDDING_MODEL in ..env.agent.backend file")
 if not FIELD_MAP:
-    raise ValueError("Missing FIELD_MAP in .env file")
+    raise ValueError("Missing FIELD_MAP in ..env.agent.backend file")
 if not GEMINI_KEY:
-    raise ValueError("Missing GEMINI_API_KEY in .env file")
+    raise ValueError("Missing GEMINI_API_KEY in ..env.agent.backend file")
 if not GEMINI_MODEL:
-    raise ValueError("Missing GEMINI_MODEL in .env file")
+    raise ValueError("Missing GEMINI_MODEL in ..env.agent.backend file")
 
 
 # ---------------------------
 # 2. Initialize Pinecone + Gemini
 # ---------------------------
 pc = Pinecone(api_key=API_KEY)
-app = FastAPI(title="Complaint Solution Finder")
+app = FastAPI(title="ComplaintSolutionFinder")
 
 
 app.add_middleware(
@@ -93,7 +93,7 @@ def log_gemini_interaction(prompt: str, response: str, filename="gemini_results.
 
 @app.get("/")
 def root():
-    return {"message": "Complaint Solution Finder API is running!"}
+    return {"message": "ComplaintSolutionFinder API is running!"}
 
 
 @app.post("/upsert")

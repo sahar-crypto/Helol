@@ -7,6 +7,7 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
+# Install Python
 RUN apt-get update && apt-get install -y \
     python3.8 \
     python3.8-venv \
@@ -14,10 +15,11 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+# Copy only requirements first (better caching)
+COPY ./helolBackend/requirements.txt /app/requirements.txt
+RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
-COPY .. /app
+# Copy project files
+COPY ./helolBackend /app
 
 RUN chmod +x loaddata.sh
-
-RUN pip3 install --no-cache-dir --system -r requirements.txt
-
