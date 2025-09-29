@@ -24,3 +24,6 @@ daphne
 
 # Requests
 requests
+
+# Async requests
+httpx

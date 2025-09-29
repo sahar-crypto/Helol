@@ -5,17 +5,23 @@ from utils.projectkit.timezone import convert_timezone
 
 class ChatViewSet:
 
-    def __init__(self, user_id):
+    def __init__(self, user_id, latest=False):
         self.user_id = user_id
+        self.latest = latest
 
     def __call__(self):
         return self.get_user_messages()
 
     def get_user_messages(self):
 
-        messages = ChatMessage.objects.filter(
-            user_id=self.user_id
-        ).order_by('message_time')
+        if self.latest:
+            message = ChatMessage.objects.filter(user_id=self.user_id).order_by("-message_time").first()
+            messages = [message] if message else []
+
+        else:
+            messages = ChatMessage.objects.filter(
+                user_id=self.user_id
+            ).order_by('message_time')
 
         data = []
 
@@ -28,7 +34,7 @@ class ChatViewSet:
             message_time = message_timestamp.strftime("%H:%M")
             if message.response:
                 response_text = message.response
-                response_timestamp = convert_timezone(message.message_time)
+                response_timestamp = convert_timezone(message.response_time)
                 response_date = response_timestamp.strftime("%Y-%m-%d")
                 response_time = response_timestamp.strftime("%H:%M")
             else:

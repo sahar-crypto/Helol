@@ -7,6 +7,7 @@ from .views import ChatViewSet
 from .models import ChatMessage
 from .services import get_answer
 from datetime import datetime
+import asyncio
 # endregion
 
 class ChatConsumer(AsyncJsonWebsocketConsumer):
@@ -35,15 +36,25 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
             audio_file=audio if audio else None,
         )
 
-        response = get_answer(message)
+        asyncio.create_task(self._process_response(chat_message.id, message))
+
+    async def _process_response(self, message_id: int, message: str):
+        """Background task to fetch response and update DB."""
+        response = await get_answer(message)
         if response:
-            # Update the message with the agent response and response time
             response_time = datetime.now()
-            chat_message.response = response
-            chat_message.response_time = response_time
-            await sync_to_async(chat_message.save)()
 
+            def update_msg():
+                chat_message = ChatMessage.objects.get(id=message_id)
+                chat_message.response = response
+                chat_message.response_time = response_time
+                chat_message.save()
+                return chat_message.user_id  # return for update trigger
 
+            user_id = await sync_to_async(update_msg)()
+
+            # 🔹 notify client with latest messages
+            await self.send_update(user_id)
 
     async def send_initial_data(self):
         """Fetch and send initial messages."""
@@ -60,7 +71,7 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
     async def send_update(self, user_id):
         """Handles real-time updates sent to the WebSocket group."""
         viewset = await sync_to_async(
-            lambda: ChatViewSet(user_id=self.user_id),
+            lambda: ChatViewSet(user_id=self.user_id, latest=True),
             thread_sensitive=True
         )()
         data = await sync_to_async(

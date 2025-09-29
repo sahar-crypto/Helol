@@ -28,7 +28,6 @@ export default function ChatBox({ userId }: ChatBoxProps) {
   const [input, setInput] = useState("");
   const ws = useRef<WebSocket | null>(null);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
-  const seenIds = useRef<Set<number>>(new Set());
 
   useEffect(() => {
   if (ws.current) return; // ✅ Prevent duplicate sockets (StrictMode safe)
@@ -51,29 +50,43 @@ export default function ChatBox({ userId }: ChatBoxProps) {
     setMessages((prev) => {
       const next = [...prev];
       for (const rec of records) {
-        if (seenIds.current.has(rec.id)) continue;
-        seenIds.current.add(rec.id);
+        const userMsgIndex = next.findIndex((m) => m.id === rec.id * 2);
+        const botMsgIndex = next.findIndex((m) => m.id === rec.id * 2 + 1);
 
-        next.push({
-          id: rec.id * 2,
-          text: rec.message,
-          sender: "user",
-          date: rec.message_date,
-          time: rec.message_time,
-        });
-
-        if (rec.response) {
+        // Update user message if needed
+        if (userMsgIndex === -1) {
           next.push({
-            id: rec.id * 2 + 1,
-            text: rec.response,
-            sender: "bot",
-            date: rec.response_date ?? rec.message_date,
-            time: rec.response_time ?? rec.message_time,
+            id: rec.id * 2,
+            text: rec.message,
+            sender: "user",
+            date: rec.message_date,
+            time: rec.message_time,
           });
+        }
+
+        // Add or update bot response
+        if (rec.response) {
+          if (botMsgIndex === -1) {
+            next.push({
+              id: rec.id * 2 + 1,
+              text: rec.response,
+              sender: "bot",
+              date: rec.response_date ?? rec.message_date,
+              time: rec.response_time ?? rec.message_time,
+            });
+          } else {
+            next[botMsgIndex] = {
+              ...next[botMsgIndex],
+              text: rec.response,
+              date: rec.response_date ?? rec.message_date,
+              time: rec.response_time ?? rec.message_time,
+            };
+          }
         }
       }
       return next;
-    });
+});
+
   };
 
   return () => {
