@@ -5,6 +5,8 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 import json
 from .views import ChatViewSet
 from .models import ChatMessage
+from .services import get_answer
+from datetime import datetime
 # endregion
 
 class ChatConsumer(AsyncJsonWebsocketConsumer):
@@ -26,13 +28,22 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         message = content.get("message")
         print(f"Received message: {message}")
         audio = content.get("audio")
-
         # Save message to the database
-        await database_sync_to_async(ChatMessage.objects.create)(
+        chat_message = await database_sync_to_async(ChatMessage.objects.create)(
             user_id=self.user_id,
             message=message,
             audio_file=audio if audio else None,
         )
+
+        response = get_answer(message)
+        if response:
+            # Update the message with the agent response and response time
+            response_time = datetime.now()
+            chat_message.response = response
+            chat_message.response_time = response_time
+            await sync_to_async(chat_message.save)()
+
+
 
     async def send_initial_data(self):
         """Fetch and send initial messages."""

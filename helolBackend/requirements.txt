@@ -20,3 +20,7 @@ websockets
 channels
 channels_redis
 daphne
+
+
+# Requests
+requests
