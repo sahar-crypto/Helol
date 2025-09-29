@@ -43,8 +43,8 @@ class User(AbstractBaseUser, PermissionsMixin, SafeDeleteModel):
     # Main Fields
     full_name = models.CharField(max_length=255, null=False, blank=False)
     national_id = models.CharField(max_length=14, unique=True, null=False, blank=False)
-    email = models.EmailField(max_length=100, unique=True)
-    phone = models.CharField(max_length=11)
+    email = models.EmailField(max_length=100, unique=True, null=True)
+    phone = models.CharField(max_length=11, null=True)
 
     # Permissions fields (required for Django admin)
     is_active = models.BooleanField(default=True)

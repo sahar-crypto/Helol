@@ -48,3 +48,20 @@ services:
     restart: on-failure
     ports:
       - "6379:6379"
+
+  agent:
+    build:
+      context: .
+      dockerfile: "Complaint Solution Finder/Dockerfile"
+    hostname: "helol-agent"
+    restart: on-failure
+    env_file:
+      - "Complaint Solution Finder/.env"
+    command:
+      bash -c "
+      uvicorn app:app --reload
+      "
+    ports:
+      - "3000:3030"
+    volumes:
+      - .:/app

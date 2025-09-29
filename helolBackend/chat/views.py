@@ -1,5 +1,6 @@
 # region Imports
 from .models import ChatMessage
+from utils.projectkit.timezone import convert_timezone
 # endregion
 
 class ChatViewSet:
@@ -22,12 +23,14 @@ class ChatViewSet:
 
             message_id = message.id
             message_text = message.message
-            message_date = message.message_time.strftime("%Y-%m-%d")
-            message_time = message.message_time.strftime("%H:%M")
+            message_timestamp = convert_timezone(message.message_time)
+            message_date = message_timestamp.strftime("%Y-%m-%d")
+            message_time = message_timestamp.strftime("%H:%M")
             if message.response:
                 response_text = message.response
-                response_date = message.response_time.strftime("%Y-%m-%d")
-                response_time = message.response_time.strftime("%H:%M")
+                response_timestamp = convert_timezone(message.message_time)
+                response_date = response_timestamp.strftime("%Y-%m-%d")
+                response_time = response_timestamp.strftime("%H:%M")
             else:
                 response_text = None
                 response_date = None
