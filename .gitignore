@@ -3,3 +3,5 @@
 !**/migrations/__init__.py
 
 .idea
+
+**/gemini_results.json
