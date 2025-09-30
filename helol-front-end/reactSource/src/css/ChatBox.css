@@ -16,14 +16,15 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* center prompt if empty */
-  align-items: center;
+  justify-content: flex-start;  /* stack messages from the top */
+  align-items: stretch;          /* let messages use their own alignment */
 }
 
 .prompt {
   color: #555;
   font-size: 20px;
   text-align: center;
+  margin: auto; /* centers the prompt vertically & horizontally */
   font-family: "Cairo", sans-serif;
 }
 
@@ -95,4 +96,23 @@
   background: #ffffff;
   border-radius: 50%;
   padding: 6px;
+}
+
+.icon-stop {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-stop img {
+  width: 32px; /* adjust as needed */
+  height: 32px;
+  margin-right: 6px;
+}
+
+.recording-time {
+  font-size: 20px;
+  color: #D9D9D9;
+  font-weight: bold;
+  font-family: "Cairo", sans-serif;
 }

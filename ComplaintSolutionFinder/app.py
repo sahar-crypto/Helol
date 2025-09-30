@@ -7,7 +7,9 @@ import os
 import time
 import google.generativeai as genai  
 import json
-
+from speechmatics.models import ConnectionSettings
+from speechmatics.batch_client import BatchClient
+from httpx import HTTPStatusError
 # ---------------------------
 # 1. Load environment variables
 # ---------------------------
@@ -22,7 +24,9 @@ PINECONE_REGION = os.getenv("PINECONE_REGION")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")  
 FIELD_MAP = os.getenv("FIELD_MAP")  
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")  
-GEMINI_MODEL = os.getenv("GEMINI_MODEL") 
+GEMINI_MODEL = os.getenv("GEMINI_MODEL")
+SPEECHMATICS_API_KEY = os.getenv("SPEECHMATICS_API_KEY")
+LANGUAGE = "ar"
 if not API_KEY:
     raise ValueError("Missing PINECONE_API_KEY in ..env.agent.backend file")
 if not INDEX_NAME:
@@ -43,6 +47,8 @@ if not GEMINI_KEY:
     raise ValueError("Missing GEMINI_API_KEY in ..env.agent.backend file")
 if not GEMINI_MODEL:
     raise ValueError("Missing GEMINI_MODEL in ..env.agent.backend file")
+if not SPEECHMATICS_API_KEY:
+    raise ValueError("Missing SPEECHMATICS_API_KEY in ..env.agent.backend file")
 
 
 # ---------------------------
@@ -159,3 +165,37 @@ def search_complaints(
         })
 
     return JSONResponse(content=solutions)
+
+
+@app.post("/speech-to-text")
+def speech_to_text(record_path: str):
+
+    settings = ConnectionSettings(
+        url="https://asr.api.speechmatics.com/v2",
+        auth_token=SPEECHMATICS_API_KEY,
+    )
+
+    # Define transcription parameters
+    conf = {"type": "transcription", "transcription_config": {"language": LANGUAGE, "operating_point": "enhanced"}}
+
+    # Open the client using a context manager
+    with BatchClient(settings) as client:
+        try:
+            job_id = client.submit_job(
+                audio=record_path,
+                transcription_config=conf,
+            )
+            print(f"job {job_id} submitted successfully, waiting for transcript")
+
+            # Note that in production, you should set up notifications instead of polling.
+            # Notifications are described here: https://docs.speechmatics.com/speech-to-text/batch/notifications
+            transcript = client.wait_for_completion(job_id, transcription_format="txt")
+            # To see the full output, try setting transcription_format='json-v2'.
+            return JSONResponse(content=transcript)
+        except HTTPStatusError as e:
+            if e.response.status_code == 401:
+                print("Invalid API key - Check your API_KEY at the top of the code!")
+            elif e.response.status_code == 400:
+                print(e.response.json()["detail"])
+            else:
+                raise e

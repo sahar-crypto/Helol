@@ -9,8 +9,8 @@ services:
       - .env.backend
     command: >
       bash -c "
-      python3 helolBackend/manage.py makemigrations &&
-      python3 helolBackend/manage.py migrate &&
+      python3 helolBackend/manage.py makemigrations --noinput &&
+      python3 helolBackend/manage.py migrate --noinput &&
       sh helolBackend/loaddata.sh &&
       python3 helolBackend/manage.py runserver 0.0.0.0:8080
       "
