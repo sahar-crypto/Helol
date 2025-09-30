@@ -14,7 +14,7 @@ function Hero(){
               </h2>
               <p>نظام متطور وآمن لتقديم شكاواكم بسهولة</p>
               <div className="hero-buttons">
-                  <a href="#" className="btn">
+                  <a href="/complain" className="btn">
                       <img src="/complain-create.png" alt="Complai Craete Icon" className="btn-icon"/>
                       قدم الشكوى
                   </a>

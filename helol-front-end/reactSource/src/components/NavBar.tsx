@@ -26,6 +26,11 @@ function NavBar() {
           </Link>
 
           <span className="divider"></span>
+          <Link to="/analytics" className="nav-analytics">
+            لوحة بيانات التحليلات
+          </Link>
+
+          <span className="divider"></span>
           <Link to="/about" className="nav-about">
             عن النظام
           </Link>
