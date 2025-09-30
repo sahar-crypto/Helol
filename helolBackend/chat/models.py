@@ -13,12 +13,12 @@ class ChatMessage(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     # Main Fields
-    message = models.TextField()
-    response = models.TextField(null=True, blank=True)
+    user_message = models.TextField(null=True)
+    bot_message = models.TextField(null=True, blank=True)
     audio_file = models.FileField(upload_to=voice_message_upload_path, null=True, blank=True)
     audio_duration = models.FloatField(null=True, blank=True)
-    message_time = models.DateTimeField(auto_now_add=True)
-    response_time = models.DateTimeField(null=True, blank=True)
+    user_message_time = models.DateTimeField(auto_now_add=True, null=True)
+    bot_message_time = models.DateTimeField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)  # save first so file exists

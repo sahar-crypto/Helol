@@ -5,12 +5,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "السلام عليكم، عندي مشكلة في عداد الكهرباء.",
-      "response": "وعليكم السلام، ممكن توضحي لي نوع المشكلة؟",
+      "user_message": "السلام عليكم، عندي مشكلة في عداد الكهرباء.",
+      "bot_message": "وعليكم السلام، ممكن توضحي لي نوع المشكلة؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:00:00Z",
-      "response_time": "2025-09-25T10:01:00Z"
+      "user_message_time": "2025-09-25T10:00:00Z",
+      "bot_message_time": "2025-09-25T10:01:00Z"
     }
   },
   {
@@ -19,12 +19,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "العداد بيفصل كل شوية لوحده.",
-      "response": "تمام، هل حصل ده من فترة طويلة ولا لسه جديد؟",
+      "user_message": "العداد بيفصل كل شوية لوحده.",
+      "bot_message": "تمام، هل حصل ده من فترة طويلة ولا لسه جديد؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:02:00Z",
-      "response_time": "2025-09-25T10:03:00Z"
+      "user_message_time": "2025-09-25T10:02:00Z",
+      "bot_message_time": "2025-09-25T10:03:00Z"
     }
   },
   {
@@ -33,12 +33,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "بدأ يحصل من الأسبوع اللي فات.",
-      "response": "شكراً على التوضيح، هنبعت فني يراجع العداد.",
+      "user_message": "بدأ يحصل من الأسبوع اللي فات.",
+      "bot_message": "شكراً على التوضيح، هنبعت فني يراجع العداد.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:04:00Z",
-      "response_time": "2025-09-25T10:05:00Z"
+      "user_message_time": "2025-09-25T10:04:00Z",
+      "bot_message_time": "2025-09-25T10:05:00Z"
     }
   },
   {
@@ -47,12 +47,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "فيه مشكلة في قراءة العداد.",
-      "response": "تمام، هنبعت حد يراجع القراءات. ممكن أعرف آخر فاتورة اتسجلت عندكم؟",
+      "user_message": "فيه مشكلة في قراءة العداد.",
+      "bot_message": "تمام، هنبعت حد يراجع القراءات. ممكن أعرف آخر فاتورة اتسجلت عندكم؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:06:00Z",
-      "response_time": "2025-09-25T10:07:00Z"
+      "user_message_time": "2025-09-25T10:06:00Z",
+      "bot_message_time": "2025-09-25T10:07:00Z"
     }
   },
   {
@@ -61,12 +61,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "أيوة، آخر فاتورة كانت في بداية الشهر.",
-      "response": "الفاتورة الأخيرة كانت كام؟",
+      "user_message": "أيوة، آخر فاتورة كانت في بداية الشهر.",
+      "bot_message": "الفاتورة الأخيرة كانت كام؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:08:00Z",
-      "response_time": "2025-09-25T10:09:00Z"
+      "user_message_time": "2025-09-25T10:08:00Z",
+      "bot_message_time": "2025-09-25T10:09:00Z"
     }
   },
   {
@@ -75,12 +75,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "الفاتورة الأخيرة كانت 350 جنيه.",
-      "response": "هل فيه اختلاف في القيمة دي عن الشهور اللي فاتت؟",
+      "user_message": "الفاتورة الأخيرة كانت 350 جنيه.",
+      "bot_message": "هل فيه اختلاف في القيمة دي عن الشهور اللي فاتت؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:10:00Z",
-      "response_time": "2025-09-25T10:11:00Z"
+      "user_message_time": "2025-09-25T10:10:00Z",
+      "bot_message_time": "2025-09-25T10:11:00Z"
     }
   },
   {
@@ -89,12 +89,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "ده أعلى من المعتاد، ليه كده؟",
-      "response": "ممكن يكون في زيادة في الاستهلاك هذا الشهر.",
+      "user_message": "ده أعلى من المعتاد، ليه كده؟",
+      "bot_message": "ممكن يكون في زيادة في الاستهلاك هذا الشهر.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:12:00Z",
-      "response_time": "2025-09-25T10:13:00Z"
+      "user_message_time": "2025-09-25T10:12:00Z",
+      "bot_message_time": "2025-09-25T10:13:00Z"
     }
   },
   {
@@ -103,12 +103,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "ما أنا مش غيَّرت أي حاجة في البيت.",
-      "response": "ممكن نراجع قراءة العداد مع الفني.",
+      "user_message": "ما أنا مش غيَّرت أي حاجة في البيت.",
+      "bot_message": "ممكن نراجع قراءة العداد مع الفني.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:14:00Z",
-      "response_time": "2025-09-25T10:15:00Z"
+      "user_message_time": "2025-09-25T10:14:00Z",
+      "bot_message_time": "2025-09-25T10:15:00Z"
     }
   },
   {
@@ -117,12 +117,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "متى هييجي الفني؟",
-      "response": "الفني هييجي خلال 24 ساعة.",
+      "user_message": "متى هييجي الفني؟",
+      "bot_message": "الفني هييجي خلال 24 ساعة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:16:00Z",
-      "response_time": "2025-09-25T10:17:00Z"
+      "user_message_time": "2025-09-25T10:16:00Z",
+      "bot_message_time": "2025-09-25T10:17:00Z"
     }
   },
   {
@@ -131,12 +131,12 @@
     "fields": {
       "session": 1,
       "user": 1,
-      "message": "تمام، شكراً ليكم.",
-      "response": "العفو، أي وقت تحبي تستفسري.",
+      "user_message": "تمام، شكراً ليكم.",
+      "bot_message": "العفو، أي وقت تحبي تستفسري.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T10:18:00Z",
-      "response_time": "2025-09-25T10:19:00Z"
+      "user_message_time": "2025-09-25T10:18:00Z",
+      "bot_message_time": "2025-09-25T10:19:00Z"
     }
   },
   {
@@ -145,12 +145,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "أنا عايزة أعمل شكوى تانية.",
-      "response": "تفضلي، ايه المشكلة؟",
+      "user_message": "أنا عايزة أعمل شكوى تانية.",
+      "bot_message": "تفضلي، ايه المشكلة؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:00:00Z",
-      "response_time": "2025-09-26T09:01:00Z"
+      "user_message_time": "2025-09-26T09:00:00Z",
+      "bot_message_time": "2025-09-26T09:01:00Z"
     }
   },
   {
@@ -159,12 +159,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "في انقطاع متكرر في الكهرباء.",
-      "response": "في أي منطقة بالضبط؟",
+      "user_message": "في انقطاع متكرر في الكهرباء.",
+      "bot_message": "في أي منطقة بالضبط؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:02:00Z",
-      "response_time": "2025-09-26T09:03:00Z"
+      "user_message_time": "2025-09-26T09:02:00Z",
+      "bot_message_time": "2025-09-26T09:03:00Z"
     }
   },
   {
@@ -173,12 +173,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "في منطقة الزهور، الشارع الرئيسي.",
-      "response": "تمام، هنبلغ الفرق الفنية.",
+      "user_message": "في منطقة الزهور، الشارع الرئيسي.",
+      "bot_message": "تمام، هنبلغ الفرق الفنية.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:04:00Z",
-      "response_time": "2025-09-26T09:05:00Z"
+      "user_message_time": "2025-09-26T09:04:00Z",
+      "bot_message_time": "2025-09-26T09:05:00Z"
     }
   },
   {
@@ -187,12 +187,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "الانقطاع بيحصل كل يوم تقريباً.",
-      "response": "كم مرة بيحصل في اليوم؟",
+      "user_message": "الانقطاع بيحصل كل يوم تقريباً.",
+      "bot_message": "كم مرة بيحصل في اليوم؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:06:00Z",
-      "response_time": "2025-09-26T09:07:00Z"
+      "user_message_time": "2025-09-26T09:06:00Z",
+      "bot_message_time": "2025-09-26T09:07:00Z"
     }
   },
   {
@@ -201,12 +201,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "مرتين أو تلاتة في اليوم.",
-      "response": "هنعمل صيانة للخطوط في المنطقة.",
+      "user_message": "مرتين أو تلاتة في اليوم.",
+      "bot_message": "هنعمل صيانة للخطوط في المنطقة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:08:00Z",
-      "response_time": "2025-09-26T09:09:00Z"
+      "user_message_time": "2025-09-26T09:08:00Z",
+      "bot_message_time": "2025-09-26T09:09:00Z"
     }
   },
   {
@@ -215,12 +215,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "متى تتوقع المشكلة تتحل؟",
-      "response": "خلال 48 ساعة إن شاء الله.",
+      "user_message": "متى تتوقع المشكلة تتحل؟",
+      "bot_message": "خلال 48 ساعة إن شاء الله.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:10:00Z",
-      "response_time": "2025-09-26T09:11:00Z"
+      "user_message_time": "2025-09-26T09:10:00Z",
+      "bot_message_time": "2025-09-26T09:11:00Z"
     }
   },
   {
@@ -229,12 +229,12 @@
     "fields": {
       "session": 2,
       "user": 1,
-      "message": "تمام، شكراً لسرعة الاستجابة.",
-      "response": "دائماً تحت خدمتك.",
+      "user_message": "تمام، شكراً لسرعة الاستجابة.",
+      "bot_message": "دائماً تحت خدمتك.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T09:12:00Z",
-      "response_time": "2025-09-26T09:13:00Z"
+      "user_message_time": "2025-09-26T09:12:00Z",
+      "bot_message_time": "2025-09-26T09:13:00Z"
     }
   },
   {
@@ -243,12 +243,12 @@
     "fields": {
       "session": 3,
       "user": 1,
-      "message": "عندي استفسار عن الفاتورة الجديدة.",
-      "response": "تفضلي، ايه الاستفسار؟",
+      "user_message": "عندي استفسار عن الفاتورة الجديدة.",
+      "bot_message": "تفضلي، ايه الاستفسار؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T14:00:00Z",
-      "response_time": "2025-09-27T14:01:00Z"
+      "user_message_time": "2025-09-27T14:00:00Z",
+      "bot_message_time": "2025-09-27T14:01:00Z"
     }
   },
   {
@@ -257,12 +257,12 @@
     "fields": {
       "session": 3,
       "user": 1,
-      "message": "لاحظت زيادة في قيمة الضريبة.",
-      "response": "ده بسبب التعديلات الجديدة في التعريفة.",
+      "user_message": "لاحظت زيادة في قيمة الضريبة.",
+      "bot_message": "ده بسبب التعديلات الجديدة في التعريفة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T14:02:00Z",
-      "response_time": "2025-09-27T14:03:00Z"
+      "user_message_time": "2025-09-27T14:02:00Z",
+      "bot_message_time": "2025-09-27T14:03:00Z"
     }
   },
   {
@@ -271,12 +271,12 @@
     "fields": {
       "session": 3,
       "user": 1,
-      "message": "هل فيه خصم للمواطنين كبار السن؟",
-      "response": "أيوة، فيه خصم 25% لمن فوق ال65 سنة.",
+      "user_message": "هل فيه خصم للمواطنين كبار السن؟",
+      "bot_message": "أيوة، فيه خصم 25% لمن فوق ال65 سنة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T14:04:00Z",
-      "response_time": "2025-09-27T14:05:00Z"
+      "user_message_time": "2025-09-27T14:04:00Z",
+      "bot_message_time": "2025-09-27T14:05:00Z"
     }
   },
   {
@@ -285,12 +285,12 @@
     "fields": {
       "session": 3,
       "user": 1,
-      "message": "كيف أقدم طلب الخصم؟",
-      "response": "تقدري تقدميه من خلال الموقع أو الفرع.",
+      "user_message": "كيف أقدم طلب الخصم؟",
+      "bot_message": "تقدري تقدميه من خلال الموقع أو الفرع.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T14:06:00Z",
-      "response_time": "2025-09-27T14:07:00Z"
+      "user_message_time": "2025-09-27T14:06:00Z",
+      "bot_message_time": "2025-09-27T14:07:00Z"
     }
   },
   {
@@ -299,12 +299,12 @@
     "fields": {
       "session": 3,
       "user": 1,
-      "message": "شكراً على المعلومات.",
-      "response": "العفو، أي خدمة أخرى؟",
+      "user_message": "شكراً على المعلومات.",
+      "bot_message": "العفو، أي خدمة أخرى؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T14:08:00Z",
-      "response_time": "2025-09-27T14:09:00Z"
+      "user_message_time": "2025-09-27T14:08:00Z",
+      "bot_message_time": "2025-09-27T14:09:00Z"
     }
   },
   {
@@ -313,12 +313,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "مساء الخير، فاتورة الكهرباء عندي عالية جداً الشهر ده.",
-      "response": "مساء النور، هل كان في استهلاك أعلى من المعتاد؟",
+      "user_message": "مساء الخير، فاتورة الكهرباء عندي عالية جداً الشهر ده.",
+      "bot_message": "مساء النور، هل كان في استهلاك أعلى من المعتاد؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:00:00Z",
-      "response_time": "2025-09-25T11:01:00Z"
+      "user_message_time": "2025-09-25T11:00:00Z",
+      "bot_message_time": "2025-09-25T11:01:00Z"
     }
   },
   {
@@ -327,12 +327,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "بصراحة مش فاهمة السبب.",
-      "response": "ممكن نراجع سجل العداد ونشوف إذا كان في خطأ.",
+      "user_message": "بصراحة مش فاهمة السبب.",
+      "bot_message": "ممكن نراجع سجل العداد ونشوف إذا كان في خطأ.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:02:00Z",
-      "response_time": "2025-09-25T11:03:00Z"
+      "user_message_time": "2025-09-25T11:02:00Z",
+      "bot_message_time": "2025-09-25T11:03:00Z"
     }
   },
   {
@@ -341,12 +341,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "تمام شكراً.",
-      "response": "العفو، هنبلغك بالنتيجة قريب.",
+      "user_message": "تمام شكراً.",
+      "bot_message": "العفو، هنبلغك بالنتيجة قريب.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:04:00Z",
-      "response_time": "2025-09-25T11:05:00Z"
+      "user_message_time": "2025-09-25T11:04:00Z",
+      "bot_message_time": "2025-09-25T11:05:00Z"
     }
   },
   {
@@ -355,12 +355,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "ممكن أعرف إزاي أتابع حالة الشكوى؟",
-      "response": "تقدري تتابعي من خلال الرقم 15300.",
+      "user_message": "ممكن أعرف إزاي أتابع حالة الشكوى؟",
+      "bot_message": "تقدري تتابعي من خلال الرقم 15300.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:06:00Z",
-      "response_time": "2025-09-25T11:07:00Z"
+      "user_message_time": "2025-09-25T11:06:00Z",
+      "bot_message_time": "2025-09-25T11:07:00Z"
     }
   },
   {
@@ -369,12 +369,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "هل فيه تطبيق للموبايل؟",
-      "response": "أيوة، فيه تطبيق 'الطاقة' للخدمات.",
+      "user_message": "هل فيه تطبيق للموبايل؟",
+      "bot_message": "أيوة، فيه تطبيق 'الطاقة' للخدمات.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:08:00Z",
-      "response_time": "2025-09-25T11:09:00Z"
+      "user_message_time": "2025-09-25T11:08:00Z",
+      "bot_message_time": "2025-09-25T11:09:00Z"
     }
   },
   {
@@ -383,12 +383,12 @@
     "fields": {
       "session": 4,
       "user": 2,
-      "message": "هحمل التطبيق وأجرب.",
-      "response": "أكيد، هيوفر عليك وقت كتير.",
+      "user_message": "هحمل التطبيق وأجرب.",
+      "bot_message": "أكيد، هيوفر عليك وقت كتير.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T11:10:00Z",
-      "response_time": "2025-09-25T11:11:00Z"
+      "user_message_time": "2025-09-25T11:10:00Z",
+      "bot_message_time": "2025-09-25T11:11:00Z"
     }
   },
   {
@@ -397,12 +397,12 @@
     "fields": {
       "session": 5,
       "user": 2,
-      "message": "عندي مشكلة في تسجيل الدخول للتطبيق.",
-      "response": "ما هي المشكلة بالضبط؟",
+      "user_message": "عندي مشكلة في تسجيل الدخول للتطبيق.",
+      "bot_message": "ما هي المشكلة بالضبط؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:00:00Z",
-      "response_time": "2025-09-26T15:01:00Z"
+      "user_message_time": "2025-09-26T15:00:00Z",
+      "bot_message_time": "2025-09-26T15:01:00Z"
     }
   },
   {
@@ -411,12 +411,12 @@
     "fields": {
       "session": 5,
       "user": 2,
-      "message": "بيقول لي كلمة المرور غلط.",
-      "response": "جربتي نسيت كلمة المرور؟",
+      "user_message": "بيقول لي كلمة المرور غلط.",
+      "bot_message": "جربتي نسيت كلمة المرور؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:02:00Z",
-      "response_time": "2025-09-26T15:03:00Z"
+      "user_message_time": "2025-09-26T15:02:00Z",
+      "bot_message_time": "2025-09-26T15:03:00Z"
     }
   },
   {
@@ -425,12 +425,12 @@
     "fields": {
       "session": 5,
       "user": 2,
-      "message": "جربت ومجاشلي أي إيميل.",
-      "response": "ممكن الإيميل يكون في السبام.",
+      "user_message": "جربت ومجاشلي أي إيميل.",
+      "bot_message": "ممكن الإيميل يكون في السبام.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:04:00Z",
-      "response_time": "2025-09-26T15:05:00Z"
+      "user_message_time": "2025-09-26T15:04:00Z",
+      "bot_message_time": "2025-09-26T15:05:00Z"
     }
   },
   {
@@ -439,12 +439,12 @@
     "fields": {
       "session": 5,
       "user": 2,
-      "message": "هشوف السبام وأرجعلك.",
-      "response": "تمام، أنا موجودة لأي مساعدة.",
+      "user_message": "هشوف السبام وأرجعلك.",
+      "bot_message": "تمام، أنا موجودة لأي مساعدة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:06:00Z",
-      "response_time": "2025-09-26T15:07:00Z"
+      "user_message_time": "2025-09-26T15:06:00Z",
+      "bot_message_time": "2025-09-26T15:07:00Z"
     }
   },
   {
@@ -453,12 +453,12 @@
     "fields": {
       "session": 6,
       "user": 2,
-      "message": "لقيت الإيميل في السبام، شكراً.",
-      "response": "العفو، كلميني لو عندك أي مشكلة تانية.",
+      "user_message": "لقيت الإيميل في السبام، شكراً.",
+      "bot_message": "العفو، كلميني لو عندك أي مشكلة تانية.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:30:00Z",
-      "response_time": "2025-09-26T15:31:00Z"
+      "user_message_time": "2025-09-26T15:30:00Z",
+      "bot_message_time": "2025-09-26T15:31:00Z"
     }
   },
   {
@@ -467,12 +467,12 @@
     "fields": {
       "session": 6,
       "user": 2,
-      "message": "هل فيه خدمة العملاء 24 ساعة؟",
-      "response": "أيوة، الخط الساخن شغال 24/7.",
+      "user_message": "هل فيه خدمة العملاء 24 ساعة؟",
+      "bot_message": "أيوة، الخط الساخن شغال 24/7.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:32:00Z",
-      "response_time": "2025-09-26T15:33:00Z"
+      "user_message_time": "2025-09-26T15:32:00Z",
+      "bot_message_time": "2025-09-26T15:33:00Z"
     }
   },
   {
@@ -481,12 +481,12 @@
     "fields": {
       "session": 6,
       "user": 2,
-      "message": "كفو والله، شكراً ليكم.",
-      "response": "نورتينا، دايماً على استعداد لخدمتك.",
+      "user_message": "كفو والله، شكراً ليكم.",
+      "bot_message": "نورتينا، دايماً على استعداد لخدمتك.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T15:34:00Z",
-      "response_time": "2025-09-26T15:35:00Z"
+      "user_message_time": "2025-09-26T15:34:00Z",
+      "bot_message_time": "2025-09-26T15:35:00Z"
     }
   },
   {
@@ -495,12 +495,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "مش قادر أسجل دخول على النظام.",
-      "response": "هنراجع بياناتك ونعيد ضبط كلمة المرور.",
+      "user_message": "مش قادر أسجل دخول على النظام.",
+      "bot_message": "هنراجع بياناتك ونعيد ضبط كلمة المرور.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:00:00Z",
-      "response_time": "2025-09-25T12:01:00Z"
+      "user_message_time": "2025-09-25T12:00:00Z",
+      "bot_message_time": "2025-09-25T12:01:00Z"
     }
   },
   {
@@ -509,12 +509,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "ممكن يكون العطل من عندي؟",
-      "response": "ممكن، جربي من متصفح مختلف أو من الموبايل.",
+      "user_message": "ممكن يكون العطل من عندي؟",
+      "bot_message": "ممكن، جربي من متصفح مختلف أو من الموبايل.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:02:00Z",
-      "response_time": "2025-09-25T12:03:00Z"
+      "user_message_time": "2025-09-25T12:02:00Z",
+      "bot_message_time": "2025-09-25T12:03:00Z"
     }
   },
   {
@@ -523,12 +523,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "جربت من الموبايل ونفس المشكلة.",
-      "response": "طيب، هنساعدك في reset لكلمة المرور.",
+      "user_message": "جربت من الموبايل ونفس المشكلة.",
+      "bot_message": "طيب، هنساعدك في reset لكلمة المرور.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:04:00Z",
-      "response_time": "2025-09-25T12:05:00Z"
+      "user_message_time": "2025-09-25T12:04:00Z",
+      "bot_message_time": "2025-09-25T12:05:00Z"
     }
   },
   {
@@ -537,12 +537,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "إزاي أعمل reset؟",
-      "response": "هبعتلك لينك على الإيميل بتاعك.",
+      "user_message": "إزاي أعمل reset؟",
+      "bot_message": "هبعتلك لينك على الإيميل بتاعك.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:06:00Z",
-      "response_time": "2025-09-25T12:07:00Z"
+      "user_message_time": "2025-09-25T12:06:00Z",
+      "bot_message_time": "2025-09-25T12:07:00Z"
     }
   },
   {
@@ -551,12 +551,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "ما أنا مش فاكر الإيميل.",
-      "response": "ممكن تعطيني الرقم القومي عشان ألاقي البيانات.",
+      "user_message": "ما أنا مش فاكر الإيميل.",
+      "bot_message": "ممكن تعطيني الرقم القومي عشان ألاقي البيانات.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:08:00Z",
-      "response_time": "2025-09-25T12:09:00Z"
+      "user_message_time": "2025-09-25T12:08:00Z",
+      "bot_message_time": "2025-09-25T12:09:00Z"
     }
   },
   {
@@ -565,12 +565,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "89012345678901",
-      "response": "تمام، لقيت الإيميل: lomai.mamdouh@helol.com",
+      "user_message": "89012345678901",
+      "bot_message": "تمام، لقيت الإيميل: lomai.mamdouh@helol.com",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:10:00Z",
-      "response_time": "2025-09-25T12:11:00Z"
+      "user_message_time": "2025-09-25T12:10:00Z",
+      "bot_message_time": "2025-09-25T12:11:00Z"
     }
   },
   {
@@ -579,12 +579,12 @@
     "fields": {
       "session": 7,
       "user": 3,
-      "message": "أيوة ده صح، شكراً.",
-      "response": "هبعتلك اللينك دلوقتي.",
+      "user_message": "أيوة ده صح، شكراً.",
+      "bot_message": "هبعتلك اللينك دلوقتي.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:12:00Z",
-      "response_time": "2025-09-25T12:13:00Z"
+      "user_message_time": "2025-09-25T12:12:00Z",
+      "bot_message_time": "2025-09-25T12:13:00Z"
     }
   },
   {
@@ -593,12 +593,12 @@
     "fields": {
       "session": 8,
       "user": 3,
-      "message": "استلمت اللينك وعملت reset.",
-      "response": "ممتاز، هل قدرت تدخلي؟",
+      "user_message": "استلمت اللينك وعملت reset.",
+      "bot_message": "ممتاز، هل قدرت تدخلي؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:30:00Z",
-      "response_time": "2025-09-25T12:31:00Z"
+      "user_message_time": "2025-09-25T12:30:00Z",
+      "bot_message_time": "2025-09-25T12:31:00Z"
     }
   },
   {
@@ -607,12 +607,12 @@
     "fields": {
       "session": 8,
       "user": 3,
-      "message": "أيوة، دخلت والحمد لله.",
-      "response": "أهلاً وسهلاً، أي خدمة تانية؟",
+      "user_message": "أيوة، دخلت والحمد لله.",
+      "bot_message": "أهلاً وسهلاً، أي خدمة تانية؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:32:00Z",
-      "response_time": "2025-09-25T12:33:00Z"
+      "user_message_time": "2025-09-25T12:32:00Z",
+      "bot_message_time": "2025-09-25T12:33:00Z"
     }
   },
   {
@@ -621,12 +621,12 @@
     "fields": {
       "session": 8,
       "user": 3,
-      "message": "عايزة أغير بيانات التواصل.",
-      "response": "تقدري تعدليها من إعدادات الحساب.",
+      "user_message": "عايزة أغير بيانات التواصل.",
+      "bot_message": "تقدري تعدليها من إعدادات الحساب.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:34:00Z",
-      "response_time": "2025-09-25T12:35:00Z"
+      "user_message_time": "2025-09-25T12:34:00Z",
+      "bot_message_time": "2025-09-25T12:35:00Z"
     }
   },
   {
@@ -635,12 +635,12 @@
     "fields": {
       "session": 8,
       "user": 3,
-      "message": "مش لاقية الخيار.",
-      "response": "هبعتلك screenshot يوضح الخطوات.",
+      "user_message": "مش لاقية الخيار.",
+      "bot_message": "هبعتلك screenshot يوضح الخطوات.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:36:00Z",
-      "response_time": "2025-09-25T12:37:00Z"
+      "user_message_time": "2025-09-25T12:36:00Z",
+      "bot_message_time": "2025-09-25T12:37:00Z"
     }
   },
   {
@@ -649,12 +649,12 @@
     "fields": {
       "session": 8,
       "user": 3,
-      "message": "تمام، لقيتها، شكراً.",
-      "response": "العفو، دايماً موجودين لمساعدتك.",
+      "user_message": "تمام، لقيتها، شكراً.",
+      "bot_message": "العفو، دايماً موجودين لمساعدتك.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-25T12:38:00Z",
-      "response_time": "2025-09-25T12:39:00Z"
+      "user_message_time": "2025-09-25T12:38:00Z",
+      "bot_message_time": "2025-09-25T12:39:00Z"
     }
   },
   {
@@ -663,12 +663,12 @@
     "fields": {
       "session": 9,
       "user": 3,
-      "message": "عندي سؤال عن الفواتير المؤجلة.",
-      "response": "تفضلي، ايه السؤال؟",
+      "user_message": "عندي سؤال عن الفواتير المؤجلة.",
+      "bot_message": "تفضلي، ايه السؤال؟",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T16:00:00Z",
-      "response_time": "2025-09-26T16:01:00Z"
+      "user_message_time": "2025-09-26T16:00:00Z",
+      "bot_message_time": "2025-09-26T16:01:00Z"
     }
   },
   {
@@ -677,12 +677,12 @@
     "fields": {
       "session": 9,
       "user": 3,
-      "message": "هل فيه غرامة على التأخير؟",
-      "response": "أيوة، فيه 5% غرامة بعد 30 يوم.",
+      "user_message": "هل فيه غرامة على التأخير؟",
+      "bot_message": "أيوة، فيه 5% غرامة بعد 30 يوم.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T16:02:00Z",
-      "response_time": "2025-09-26T16:03:00Z"
+      "user_message_time": "2025-09-26T16:02:00Z",
+      "bot_message_time": "2025-09-26T16:03:00Z"
     }
   },
   {
@@ -691,12 +691,12 @@
     "fields": {
       "session": 9,
       "user": 3,
-      "message": "ممكن أقسط الفاتورة؟",
-      "response": "أيوة، تقدري تقدمي طلب تقسيط.",
+      "user_message": "ممكن أقسط الفاتورة؟",
+      "bot_message": "أيوة، تقدري تقدمي طلب تقسيط.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T16:04:00Z",
-      "response_time": "2025-09-26T16:05:00Z"
+      "user_message_time": "2025-09-26T16:04:00Z",
+      "bot_message_time": "2025-09-26T16:05:00Z"
     }
   },
   {
@@ -705,12 +705,12 @@
     "fields": {
       "session": 9,
       "user": 3,
-      "message": "إزاي أقدم الطلب؟",
-      "response": "من خلال الفرع أو التطبيق.",
+      "user_message": "إزاي أقدم الطلب؟",
+      "bot_message": "من خلال الفرع أو التطبيق.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T16:06:00Z",
-      "response_time": "2025-09-26T16:07:00Z"
+      "user_message_time": "2025-09-26T16:06:00Z",
+      "bot_message_time": "2025-09-26T16:07:00Z"
     }
   },
   {
@@ -719,12 +719,12 @@
     "fields": {
       "session": 9,
       "user": 3,
-      "message": "شكراً على المعلومات.",
-      "response": "العفو، نورتينا.",
+      "user_message": "شكراً على المعلومات.",
+      "bot_message": "العفو، نورتينا.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-26T16:08:00Z",
-      "response_time": "2025-09-26T16:09:00Z"
+      "user_message_time": "2025-09-26T16:08:00Z",
+      "bot_message_time": "2025-09-26T16:09:00Z"
     }
   },
   {
@@ -733,12 +733,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "عايزة أعرف آخر عداد مسجل.",
-      "response": "آخر قراءة كانت 2450 ك.و.س.",
+      "user_message": "عايزة أعرف آخر عداد مسجل.",
+      "bot_message": "آخر قراءة كانت 2450 ك.و.س.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:00:00Z",
-      "response_time": "2025-09-27T10:01:00Z"
+      "user_message_time": "2025-09-27T10:00:00Z",
+      "bot_message_time": "2025-09-27T10:01:00Z"
     }
   },
   {
@@ -747,12 +747,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "متى كانت القراءة؟",
-      "response": "من 15 يوم، في أول الشهر.",
+      "user_message": "متى كانت القراءة؟",
+      "bot_message": "من 15 يوم، في أول الشهر.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:02:00Z",
-      "response_time": "2025-09-27T10:03:00Z"
+      "user_message_time": "2025-09-27T10:02:00Z",
+      "bot_message_time": "2025-09-27T10:03:00Z"
     }
   },
   {
@@ -761,12 +761,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "تمام، شكراً لمساعدتك.",
-      "response": "أي وقت، دايماً تحت خدمتك.",
+      "user_message": "تمام، شكراً لمساعدتك.",
+      "bot_message": "أي وقت، دايماً تحت خدمتك.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:04:00Z",
-      "response_time": "2025-09-27T10:05:00Z"
+      "user_message_time": "2025-09-27T10:04:00Z",
+      "bot_message_time": "2025-09-27T10:05:00Z"
     }
   },
   {
@@ -775,12 +775,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "هل فيه خصم للطاقة الشمسية؟",
-      "response": "أيوة، فيه خصم 15% للمشتركين في الطاقة الشمسية.",
+      "user_message": "هل فيه خصم للطاقة الشمسية؟",
+      "bot_message": "أيوة، فيه خصم 15% للمشتركين في الطاقة الشمسية.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:06:00Z",
-      "response_time": "2025-09-27T10:07:00Z"
+      "user_message_time": "2025-09-27T10:06:00Z",
+      "bot_message_time": "2025-09-27T10:07:00Z"
     }
   },
   {
@@ -789,12 +789,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "إزاي أقدم في النظام؟",
-      "response": "تقدري تقدمي الأوراق من الفرع.",
+      "user_message": "إزاي أقدم في النظام؟",
+      "bot_message": "تقدري تقدمي الأوراق من الفرع.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:08:00Z",
-      "response_time": "2025-09-27T10:09:00Z"
+      "user_message_time": "2025-09-27T10:08:00Z",
+      "bot_message_time": "2025-09-27T10:09:00Z"
     }
   },
   {
@@ -803,12 +803,12 @@
     "fields": {
       "session": 10,
       "user": 3,
-      "message": "شكراً جزيلاً.",
-      "response": "العفو، تفضلي بالاستفادة من الخدمة.",
+      "user_message": "شكراً جزيلاً.",
+      "bot_message": "العفو، تفضلي بالاستفادة من الخدمة.",
       "audio_file": null,
       "audio_duration": null,
-      "message_time": "2025-09-27T10:10:00Z",
-      "response_time": "2025-09-27T10:11:00Z"
+      "user_message_time": "2025-09-27T10:10:00Z",
+      "bot_message_time": "2025-09-27T10:11:00Z"
     }
   }
 ]

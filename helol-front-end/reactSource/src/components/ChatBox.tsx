@@ -1,22 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import "../css/ChatBox.css";
 
-interface BackendRecord {
-  id: number;
-  message: string;
-  response?: string;
-  message_date: string;
-  message_time: string;
-  response_date?: string;
-  response_time?: string;
-}
-
 interface ChatMessage {
   id: number;
-  text: string;
+  text?: string;
+  audioUrl?: string;
   sender: "user" | "bot";
   date: string;
   time: string;
+  tempId?: number; // optimistic message identifier
 }
 
 interface ChatBoxProps {
@@ -26,75 +18,105 @@ interface ChatBoxProps {
 export default function ChatBox({ userId }: ChatBoxProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
+  const [isRecording, setIsRecording] = useState(false);
+  const [recordingTime, setRecordingTime] = useState(0);
+
   const ws = useRef<WebSocket | null>(null);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
 
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  };
+
+  // --- WebSocket setup ---
   useEffect(() => {
-  if (ws.current) return; // ✅ Prevent duplicate sockets (StrictMode safe)
+    if (ws.current) return;
+    const socket = new WebSocket(`ws://localhost:8000/ws/chat_consumer/${userId}/`);
+    ws.current = socket;
 
-  const socket = new WebSocket(`ws://localhost:8000/ws/chat_consumer/${userId}/`);
-  ws.current = socket;
+    socket.onopen = () => console.log("✅ WebSocket connected");
+    socket.onclose = () => console.log("❌ WebSocket closed");
+    socket.onerror = (err) => console.error("WebSocket error:", err);
 
-  socket.onopen = () => console.log("✅ WebSocket connected");
-  socket.onclose = () => console.log("❌ WebSocket closed");
-  socket.onerror = (err) => console.error("WebSocket error:", err);
+    socket.onmessage = (event: MessageEvent) => {
+      const data = JSON.parse(event.data);
+      const messagesArray = Array.isArray(data) ? data : [data];
 
-  socket.onmessage = (event: MessageEvent) => {
-    const parsed = JSON.parse(event.data);
+      setMessages((prev) => {
+        const newMessages = [...prev];
 
-    let records: BackendRecord[] = [];
-    if (Array.isArray(parsed)) records = parsed;
-    else if (parsed.data && Array.isArray(parsed.data)) records = parsed.data;
-    else records = [parsed];
+        messagesArray.forEach(
+          ({ id, user_message, bot_message, audio_file,
+             user_message_date, user_message_time,
+             bot_message_date, bot_message_time, tempId }) => {
 
-    setMessages((prev) => {
-      const next = [...prev];
-      for (const rec of records) {
-        const userMsgIndex = next.findIndex((m) => m.id === rec.id * 2);
-        const botMsgIndex = next.findIndex((m) => m.id === rec.id * 2 + 1);
+            // Replace optimistic message if tempId matches
+            if (tempId) {
+              const idx = newMessages.findIndex((m) => m.tempId === tempId);
+              if (idx !== -1) {
+                newMessages[idx] = {
+                  ...newMessages[idx],
+                  id,
+                  text: user_message ?? newMessages[idx].text,
+                  audioUrl: audio_file ?? newMessages[idx].audioUrl,
+                  sender: "user",
+                  date: user_message_date,
+                  time: user_message_time,
+                  tempId, // keep tempId for safety
+                };
+                return;
+              }
+            }
 
-        // Update user message if needed
-        if (userMsgIndex === -1) {
-          next.push({
-            id: rec.id * 2,
-            text: rec.message,
-            sender: "user",
-            date: rec.message_date,
-            time: rec.message_time,
-          });
-        }
+            // user audio
+            if (audio_file && !newMessages.some((m) => m.id === id && m.audioUrl)) {
+              newMessages.push({
+                id,
+                audioUrl: audio_file,
+                sender: "user",
+                date: user_message_date,
+                time: user_message_time,
+              });
+            }
 
-        // Add or update bot response
-        if (rec.response) {
-          if (botMsgIndex === -1) {
-            next.push({
-              id: rec.id * 2 + 1,
-              text: rec.response,
-              sender: "bot",
-              date: rec.response_date ?? rec.message_date,
-              time: rec.response_time ?? rec.message_time,
-            });
-          } else {
-            next[botMsgIndex] = {
-              ...next[botMsgIndex],
-              text: rec.response,
-              date: rec.response_date ?? rec.message_date,
-              time: rec.response_time ?? rec.message_time,
-            };
+            // user text
+            if (user_message && !newMessages.some((m) => m.id === id && m.text === user_message)) {
+              newMessages.push({
+                id,
+                text: user_message,
+                sender: "user",
+                date: user_message_date,
+                time: user_message_time,
+              });
+            }
+
+            // bot reply
+            if (bot_message && !newMessages.some((m) => m.id === id && m.text === bot_message)) {
+              newMessages.push({
+                id,
+                text: bot_message,
+                sender: "bot",
+                date: bot_message_date,
+                time: bot_message_time,
+              });
+            }
           }
-        }
-      }
-      return next;
-});
+        );
 
-  };
+        return newMessages;
+      });
+    };
 
-  return () => {
-    socket.close();
-    ws.current = null; // ✅ reset ref
-  };
-}, [userId]);
-
+    return () => {
+      socket.close();
+      ws.current = null;
+    };
+  }, [userId]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -102,31 +124,108 @@ export default function ChatBox({ userId }: ChatBoxProps) {
 
   const handleSend = () => {
     if (!input.trim()) return;
-    ws.current?.send(JSON.stringify({ message: input }));
-    setInput(""); // clear input (backend will echo record back)
+    const tempId = Date.now();
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: tempId,
+        tempId,
+        text: input,
+        sender: "user",
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
+      },
+    ]);
+
+    ws.current?.send(JSON.stringify({ user_message: input, tempId }));
+    setInput("");
   };
 
+  // --- Recording functions ---
+  const startRecording = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = new MediaRecorder(stream);
+      recorderRef.current = recorder;
+      chunksRef.current = [];
+
+      recorder.ondataavailable = (e) => chunksRef.current.push(e.data);
+
+      recorder.onstop = async () => {
+        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
+        const base64 = await blobToBase64(blob);
+        const duration = recordingTime;
+
+        const tempId = Date.now();
+
+        // Optimistic audio message
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: tempId,
+            tempId,
+            audioUrl: URL.createObjectURL(blob),
+            sender: "user",
+            date: new Date().toLocaleDateString(),
+            time: new Date().toLocaleTimeString(),
+          },
+        ]);
+
+        ws.current?.send(
+          JSON.stringify({
+            type: "audio",
+            audio: base64,
+            filename: `recording_${tempId}.webm`,
+            duration,
+            tempId,
+          })
+        );
+
+        setRecordingTime(0);
+      };
+
+      recorder.start();
+      setIsRecording(true);
+
+      timerRef.current = setInterval(() => {
+        setRecordingTime((prev) => prev + 1);
+      }, 1000);
+    } catch (err) {
+      console.error("Microphone access denied:", err);
+    }
+  };
+
+  const stopRecording = () => {
+    recorderRef.current?.stop();
+    setIsRecording(false);
+    if (timerRef.current) clearInterval(timerRef.current);
+  };
+
+  const blobToBase64 = (blob: Blob): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+
+  // --- UI ---
   return (
     <div className="chat-container">
       <div className="chat-box">
-        {/* Prompt if no messages */}
-        {messages.length === 0 && (
-          <div className="prompt">ما هي شكوتك؟</div>
-        )}
-
-        {/* Messages */}
+        {messages.length === 0 && <div className="prompt">ما هي شكوتك؟</div>}
         {messages.map((msg) => (
-          <div key={msg.id} className={`message ${msg.sender}`}>
-            <div className="message-text" dir="rtl">{msg.text}</div>
-            <div className="timestamp">
-              {msg.date} | {msg.time}
-            </div>
+          <div key={msg.tempId ?? msg.id} className={`message ${msg.sender}`}>
+            {msg.text && <div className="message-text" dir="rtl">{msg.text}</div>}
+            {msg.audioUrl && <audio controls>
+              <source src={msg.audioUrl} type="audio/webm"/></audio>}
+            <div className="timestamp">{msg.date} | {msg.time}</div>
           </div>
         ))}
         <div ref={chatEndRef} />
       </div>
 
-      {/* Input row */}
       <div className="chat-input">
         <span className="icon-send" onClick={handleSend}>
           <img src="/add.png" alt="Send Icon" />
@@ -139,12 +238,16 @@ export default function ChatBox({ userId }: ChatBoxProps) {
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
         />
         <div className="icons">
-          <span className="icon-image">
-            <img src="/add_photo.png" alt="Image Icon" />
-          </span>
-          <span className="icon-mic">
-            <img src="/voice.png" alt="Mic Icon" />
-          </span>
+          {!isRecording ? (
+            <span className="icon-mic" onClick={startRecording}>
+              <img src="/voice.png" alt="Mic Icon" />
+            </span>
+          ) : (
+            <span className="icon-stop" onClick={stopRecording}>
+              <img src="/stop-button.png" alt="Stop Icon" />
+              <span className="recording-time">{formatTime(recordingTime)}</span>
+            </span>
+          )}
         </div>
       </div>
     </div>
