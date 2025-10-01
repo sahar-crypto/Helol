@@ -168,17 +168,20 @@ def search_complaints(
 
 
 @app.post("/speech-to-text")
-def speech_to_text(record_path: str):
-
+def speech_to_text(record_path: str = Body(..., embed=True)):
     settings = ConnectionSettings(
         url="https://asr.api.speechmatics.com/v2",
         auth_token=SPEECHMATICS_API_KEY,
     )
 
-    # Define transcription parameters
-    conf = {"type": "transcription", "transcription_config": {"language": LANGUAGE, "operating_point": "enhanced"}}
+    conf = {
+        "type": "transcription",
+        "transcription_config": {
+            "language": LANGUAGE,
+            "operating_point": "enhanced"
+        }
+    }
 
-    # Open the client using a context manager
     with BatchClient(settings) as client:
         try:
             job_id = client.submit_job(
@@ -187,11 +190,9 @@ def speech_to_text(record_path: str):
             )
             print(f"job {job_id} submitted successfully, waiting for transcript")
 
-            # Note that in production, you should set up notifications instead of polling.
-            # Notifications are described here: https://docs.speechmatics.com/speech-to-text/batch/notifications
             transcript = client.wait_for_completion(job_id, transcription_format="txt")
-            # To see the full output, try setting transcription_format='json-v2'.
             return JSONResponse(content=transcript)
+
         except HTTPStatusError as e:
             if e.response.status_code == 401:
                 print("Invalid API key - Check your API_KEY at the top of the code!")

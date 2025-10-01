@@ -10,6 +10,8 @@ python3 helolBackend/manage.py loaddata users
 python3 helolBackend/manage.py loaddata complaintsessions
 python3 helolBackend/manage.py loaddata chatmessages
 python3 helolBackend/manage.py loaddata complaints
+python3 helolBackend/manage.py loaddata news
+
 
 
 echo "Starting Django server..."

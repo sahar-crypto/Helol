@@ -12,6 +12,7 @@ services:
       python3 helolBackend/manage.py makemigrations --noinput &&
       python3 helolBackend/manage.py migrate --noinput &&
       sh helolBackend/loaddata.sh &&
+      python3 helolBackend/manage.py upsertNews &&
       python3 helolBackend/manage.py runserver 0.0.0.0:8080
       "
     ports:
@@ -64,4 +65,4 @@ services:
     ports:
       - "3000:3030"
     volumes:
-      - ./ComplaintSolutionFinder:/app
+      - ./helolBackend/media:/app/helolBackend/media
