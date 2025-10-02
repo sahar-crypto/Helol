@@ -16,6 +16,22 @@ docker-compose --env-file .env.backend build --no-cache
 docker-compose --env-file .env.backend up
 ```
 **Without Docker**
-1. Setup the backend
+1. Download and install [python](https://www.python.org/downloads/).
+2. Setup the backend
+```bash
+cd helolBackend
+pip3 install -r requirements.txt
+python3 manage.py makemigrations --noinput
+python3 manage.py migrate --noinput
+python3 manage.py upsertNews
+python3 manage.py runserver
+```
+3. Setup the frontend
+```bash
+cd helol-front-end/reactSource
+npm install
+npm run dev
+```
+4. Open up this [link](http://localhost:5173/) in your browser.
 
-2. 
+
