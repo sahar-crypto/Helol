@@ -15,6 +15,9 @@ git clone https://github.com/sahar-crypto/Helol.git
 docker-compose --env-file .env.backend build --no-cache
 docker-compose --env-file .env.backend up
 ```
+4. Open up this [link](http://localhost:5173/) in your browser.
+
+
 **Without Docker**
 1. Download and install [python](https://www.python.org/downloads/).
 2. Setup the backend
